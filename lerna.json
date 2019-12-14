@@ -1,0 +1,16 @@
+{
+  "changelog": {
+    "labels": {
+      "pr(enhancement)": ":rocket: Enhancement",
+      "pr(bug)": ":bug: Bug Fix",
+      "pr(documentation)": ":book: Documentation",
+      "pr(dependency)": ":deciduous_tree: Dependency",
+      "pr(chore)": ":turtle: Chore"
+    },
+    "repo": "gitterapp/githubts",
+    "cacheDir": ".changelog"
+  },
+  "packages": ["packages/*"],
+  "version": "independent",
+  "npmClient": "yarn"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@githubts/github-contributions",
+  "version": "0.0.1",
+  "description": "A library to get `GitHub contributions` for TypeScript developers.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "github-contributions",
+    "github",
+    "contributions"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitterapp/githubts.git",
+    "directory": "packages/github-contributions"
+  },
+  "homepage": "https://github.com/gitterapp/githubts",
+  "bugs": "https://github.com/gitterapp/githubts/issues",
+  "authors": [
+    "Ying Wang <upcwangying@gmail.com> (https://github.com/upcwangying)"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "request-promise": "^4.2.4"
+  },
+  "peerDependencies": {
+    "request": "^2.34"
+  }
+}

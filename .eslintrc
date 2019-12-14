@@ -1,0 +1,36 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "semi": [0],
+    "arrow-parens": [1, "as-needed"],
+    "prefer-promise-reject-errors": [0],
+    "object-curly-newline": [0],
+    "operator-linebreak": ["error", "after"],
+    "guard-for-in": [0],
+    "no-restricted-syntax": [0],
+    "import/newline-after-import": [0],
+    "import/prefer-default-export": [0],
+    "import/no-unresolved": [0]
+  }
+}

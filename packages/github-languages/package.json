@@ -1,0 +1,35 @@
+{
+  "name": "@githubts/github-languages",
+  "version": "0.0.1",
+  "description": "A library to get `GitHub languages` for TypeScript developers.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "github-languages",
+    "github",
+    "languages"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitterapp/githubts.git",
+    "directory": "packages/github-languages"
+  },
+  "homepage": "https://github.com/gitterapp/githubts",
+  "bugs": "https://github.com/gitterapp/githubts/issues",
+  "authors": [
+    "Ying Wang <upcwangying@gmail.com> (https://github.com/upcwangying)"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "js-yaml": "^3.13.1",
+    "request-promise": "^4.2.4"
+  },
+  "peerDependencies": {
+    "request": "^2.34"
+  }
+}

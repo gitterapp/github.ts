@@ -1,5 +1,5 @@
-class Language {
-  constructor(text, color) {
+export default class Language {
+  constructor(public text: string, public color: string) {
     this.text = text
     this.color = color
   }
@@ -12,5 +12,3 @@ class Language {
     return JSON.parse(json)
   }
 }
-
-module.exports = Language

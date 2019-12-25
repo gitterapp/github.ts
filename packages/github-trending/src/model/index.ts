@@ -1,17 +1,17 @@
 // trending repositories model
-class TrendingRepository {
-  constructor({
-    owner,
-    avatar,
-    name,
-    description,
-    descriptionHTML,
-    starCount,
-    forkCount,
-    stars,
-    primaryLanguage,
-    buildBys,
-  }) {
+export class TrendingRepository {
+  constructor(
+    public owner: string,
+    public avatar: string,
+    public name: string,
+    public description: string,
+    public descriptionHTML: string,
+    public starCount: number,
+    public forkCount: number,
+    public stars: string,
+    public primaryLanguage: PrimaryLanguage,
+    public buildBys: RepositoryBuildBy[],
+  ) {
     this.owner = owner
     this.avatar = avatar
     this.name = name
@@ -33,8 +33,8 @@ class TrendingRepository {
   }
 }
 
-class PrimaryLanguage {
-  constructor({ name, color }) {
+export class PrimaryLanguage {
+  constructor(public name: string, public color: string) {
     this.name = name
     this.color = color
   }
@@ -48,8 +48,8 @@ class PrimaryLanguage {
   }
 }
 
-class RepositoryBuildBy {
-  constructor({ avatar, username }) {
+export class RepositoryBuildBy {
+  constructor(public avatar: string, public username: string) {
     this.avatar = avatar
     this.username = username
   }
@@ -64,8 +64,13 @@ class RepositoryBuildBy {
 }
 
 // trending developers model
-class TrendingDeveloper {
-  constructor({ avatar, username, nickname, popularRepository }) {
+export class TrendingDeveloper {
+  constructor(
+    public avatar: string,
+    public username: string,
+    public nickname: string,
+    public popularRepository: string,
+  ) {
     this.avatar = avatar
     this.username = username
     this.nickname = nickname
@@ -82,8 +87,13 @@ class TrendingDeveloper {
 }
 
 // popular repository model
-class PopularRepository {
-  constructor({ url, name, description, descriptionRawHtml }) {
+export class PopularRepository {
+  constructor(
+    public url: string,
+    public name: string,
+    public description: string,
+    public descriptionRawHtml: string,
+  ) {
     this.url = url
     this.name = name
     this.description = description
@@ -97,12 +107,4 @@ class PopularRepository {
   static fromJson(json) {
     return JSON.parse(json)
   }
-}
-
-module.exports = {
-  TrendingRepository,
-  PrimaryLanguage,
-  RepositoryBuildBy,
-  TrendingDeveloper,
-  PopularRepository,
 }

@@ -1,14 +1,14 @@
+import Since from './constant/trending-since'
 const rp = require('request-promise')
 const cheerio = require('cheerio')
-const TrendingSince = require('./constant/trending-since')
-const TrendingType = require('./constant/trending-type')
+
 const {
   TrendingRepository,
   PrimaryLanguage,
   RepositoryBuildBy,
   TrendingDeveloper,
   PopularRepository,
-} = require('./model/index.js')
+} = require('./model')
 
 const URL = 'https://github.com'
 
@@ -17,7 +17,7 @@ const options = {
   transform: body => cheerio.load(body),
 }
 
-const getTrendingRepositories = ({ since, language } = {}) =>
+export const getTrendingRepositories = (since: Since, language: string) =>
   new Promise((resolve, reject) => {
     let uri = `${URL}/trending`
     if (language) {
@@ -149,7 +149,7 @@ const getTrendingRepositories = ({ since, language } = {}) =>
       })
   })
 
-const getTrendingDevelopers = ({ since, language } = {}) =>
+export const getTrendingDevelopers = (since: Since, language: string) =>
   new Promise((resolve, reject) => {
     let uri = `${URL}/trending/developers`
     if (language) {
@@ -242,17 +242,3 @@ const getTrendingDevelopers = ({ since, language } = {}) =>
         reject(error)
       })
   })
-
-module.exports = {
-  TrendingRepository,
-  PrimaryLanguage,
-  RepositoryBuildBy,
-  TrendingDeveloper,
-  PopularRepository,
-
-  TrendingSince,
-  TrendingType,
-
-  getTrendingRepositories,
-  getTrendingDevelopers,
-}

@@ -1,13 +1,13 @@
 const rp = require('request-promise')
 const cheerio = require('cheerio')
-const Contribution = require('./model/index.js')
+const Contribution = require('./model')
 
 const options = {
   uri: 'https://github.com/trending',
   transform: body => cheerio.load(body),
 }
 
-const getContributions = (login, { from, to } = {}) =>
+const getContributions = (login: string, from?: string, to?: string) =>
   new Promise((resolve, reject) => {
     if (!login) throw new Error('login must not be null')
     let uri = `https://github.com/${login}`
@@ -37,7 +37,7 @@ const getContributions = (login, { from, to } = {}) =>
       })
   })
 
-const getContributionsSvg = (login, { keepDateText = false, from, to }) =>
+const getContributionsSvg = (login: string, { keepDateText = false, from, to }) =>
   new Promise((resolve, reject) => {
     if (!login) throw new Error('login must not be null')
     let uri = `https://github.com/${login}`
@@ -63,7 +63,7 @@ const getContributionsSvg = (login, { keepDateText = false, from, to }) =>
       })
   })
 
-module.exports = {
+export default {
   Contribution,
 
   getContributions,

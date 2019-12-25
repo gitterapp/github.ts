@@ -1,6 +1,6 @@
 const rp = require('request-promise')
 const jsyaml = require('js-yaml')
-const Language = require('./model/index.js')
+const Language = require('./model')
 
 const options = {
   uri: 'https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml',
@@ -27,7 +27,7 @@ const getLanguages = () =>
       })
   })
 
-module.exports = {
+export default {
   Language,
 
   getLanguages,

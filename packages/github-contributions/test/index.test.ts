@@ -1,4 +1,4 @@
-const { getContributions } = require('../src/index')
+const { getContributions } = require('../src')
 
 describe('get contributions', () => {
   let contributions

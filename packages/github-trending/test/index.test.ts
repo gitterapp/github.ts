@@ -1,4 +1,4 @@
-const { getTrendingRepositories, getTrendingDevelopers } = require('../src/index')
+const { getTrendingRepositories, getTrendingDevelopers } = require('../src')
 
 describe('get trending repositories', () => {
   let repositories

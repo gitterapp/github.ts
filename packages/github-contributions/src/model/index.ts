@@ -1,6 +1,6 @@
 // Contribution model
-class Contribution {
-  constructor({ count, color, date }) {
+export default class Contribution {
+  constructor(public count: number, public color: string, public date: string) {
     this.count = count
     this.color = color
     this.date = date
@@ -14,5 +14,3 @@ class Contribution {
     return JSON.parse(json)
   }
 }
-
-module.exports = Contribution

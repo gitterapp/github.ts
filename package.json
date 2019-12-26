@@ -1,16 +1,18 @@
 {
   "private": true,
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap --hoist",
+    "clean": "lerna run clean",
+    "build": "lerna run build",
+    "pub": "lerna publish",
     "changelog": "lerna-changelog",
-    "clean": "lerna clean -y",
     "lint": "eslint --ext .js packages",
     "precommit": "lint-staged",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test": "jest"
   },
   "lint-staged": {
-    "**/*.{js,jsx,tsx,ts,less,json}": [
+    "**/!(dist)/**/*.{js,jsx,tsx,ts,less,json}": [
       "prettier --write",
       "git add"
     ]

@@ -1,10 +1,6 @@
 // Contribution model
 export default class Contribution {
-  constructor(public count: number, public color: string, public date: string) {
-    this.count = count
-    this.color = color
-    this.date = date
-  }
+  constructor(public count: number, public color: string, public date: string) {}
 
   toJson() {
     return JSON.stringify(this)

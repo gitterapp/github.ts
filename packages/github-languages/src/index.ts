@@ -6,7 +6,7 @@ const options = {
   uri: 'https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml',
 }
 
-const getLanguages = () =>
+const getLanguages = (): Promise<any> =>
   new Promise((resolve, reject) => {
     rp(options)
       .then(response => {
@@ -27,8 +27,4 @@ const getLanguages = () =>
       })
   })
 
-export default {
-  Language,
-
-  getLanguages,
-}
+export default getLanguages

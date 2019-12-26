@@ -11,18 +11,7 @@ export class TrendingRepository {
     public stars: string,
     public primaryLanguage: PrimaryLanguage,
     public buildBys: RepositoryBuildBy[],
-  ) {
-    this.owner = owner
-    this.avatar = avatar
-    this.name = name
-    this.description = description
-    this.descriptionHTML = descriptionHTML
-    this.starCount = starCount
-    this.forkCount = forkCount
-    this.stars = stars
-    this.primaryLanguage = primaryLanguage
-    this.buildBys = buildBys
-  }
+  ) {}
 
   toJson() {
     return JSON.stringify(this)
@@ -34,10 +23,7 @@ export class TrendingRepository {
 }
 
 export class PrimaryLanguage {
-  constructor(public name: string, public color: string) {
-    this.name = name
-    this.color = color
-  }
+  constructor(public name: string, public color: string) {}
 
   toJson() {
     return JSON.stringify(this)
@@ -49,10 +35,7 @@ export class PrimaryLanguage {
 }
 
 export class RepositoryBuildBy {
-  constructor(public avatar: string, public username: string) {
-    this.avatar = avatar
-    this.username = username
-  }
+  constructor(public avatar: string, public username: string) {}
 
   toJson() {
     return JSON.stringify(this)
@@ -70,12 +53,7 @@ export class TrendingDeveloper {
     public username: string,
     public nickname: string,
     public popularRepository: string,
-  ) {
-    this.avatar = avatar
-    this.username = username
-    this.nickname = nickname
-    this.popularRepository = popularRepository
-  }
+  ) {}
 
   toJson() {
     return JSON.stringify(this)
@@ -93,12 +71,7 @@ export class PopularRepository {
     public name: string,
     public description: string,
     public descriptionRawHtml: string,
-  ) {
-    this.url = url
-    this.name = name
-    this.description = description
-    this.descriptionRawHtml = descriptionRawHtml
-  }
+  ) {}
 
   toJson() {
     return JSON.stringify(this)

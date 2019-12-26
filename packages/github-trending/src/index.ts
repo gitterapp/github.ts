@@ -17,7 +17,10 @@ const options = {
   transform: body => cheerio.load(body),
 }
 
-export const getTrendingRepositories = (since: Since, language: string) =>
+export const getTrendingRepositories = ({
+  since,
+  language,
+}: { since?: Since; language?: string } = {}): Promise<any> =>
   new Promise((resolve, reject) => {
     let uri = `${URL}/trending`
     if (language) {
@@ -149,7 +152,10 @@ export const getTrendingRepositories = (since: Since, language: string) =>
       })
   })
 
-export const getTrendingDevelopers = (since: Since, language: string) =>
+export const getTrendingDevelopers = ({
+  since,
+  language,
+}: { since?: Since; language?: string } = {}): Promise<any> =>
   new Promise((resolve, reject) => {
     let uri = `${URL}/trending/developers`
     if (language) {

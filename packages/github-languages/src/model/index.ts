@@ -1,8 +1,5 @@
 export default class Language {
-  constructor(public text: string, public color: string) {
-    this.text = text
-    this.color = color
-  }
+  constructor(public text: string, public color: string) {}
 
   toJson() {
     return JSON.stringify(this)

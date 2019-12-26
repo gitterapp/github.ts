@@ -7,11 +7,14 @@ const options = {
   transform: body => cheerio.load(body),
 }
 
-const getContributions = (login: string, from?: string, to?: string) =>
+const getContributions = (
+  login: string,
+  { from, to }: { from?: string; to?: string } = {},
+): Promise<any> =>
   new Promise((resolve, reject) => {
     if (!login) throw new Error('login must not be null')
     let uri = `https://github.com/${login}`
-    if (from != null && to != null) {
+    if (from && to) {
       uri += `?from=${from}&to=${to}`
     }
     rp({ ...options, uri })
@@ -37,11 +40,14 @@ const getContributions = (login: string, from?: string, to?: string) =>
       })
   })
 
-const getContributionsSvg = (login: string, { keepDateText = false, from, to }) =>
+const getContributionsSvg = (
+  login: string,
+  { keepDateText = false, from, to }: { keepDateText?: boolean; from?: string; to?: string } = {},
+): Promise<any> =>
   new Promise((resolve, reject) => {
     if (!login) throw new Error('login must not be null')
     let uri = `https://github.com/${login}`
-    if (from != null && to != null) {
+    if (from && to) {
       uri += `?from=${from}&to=${to}`
     }
     rp({ ...options, uri })
@@ -64,8 +70,6 @@ const getContributionsSvg = (login: string, { keepDateText = false, from, to }) 
   })
 
 export default {
-  Contribution,
-
   getContributions,
   getContributionsSvg,
 }

@@ -1,6 +1,6 @@
 {
   "name": "@githubts/github-trending",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A library to get `GitHub trending repositories` or `GitHub trending developers` for TypeScript developers.",
   "main": "dist/index",
   "types": "dist/index",

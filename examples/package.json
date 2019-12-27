@@ -10,7 +10,7 @@
   "author": "Ying Wang <upcwangying@gmail.com> (https://github.com/upcwangying)",
   "license": "MIT",
   "dependencies": {
-    "@githubts/github-trending": "0.0.1",
+    "@githubts/github-trending": "0.1.1",
     "request": "^2.88.0"
   }
 }

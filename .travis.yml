@@ -13,4 +13,4 @@ install:
   - yarn install
 
 script:
-  - npm run test && npm run codecov
+  - npm run test && npm run codecov && npm run coveralls

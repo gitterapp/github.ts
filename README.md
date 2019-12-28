@@ -2,6 +2,7 @@
 
 [![Travis (.org)](https://img.shields.io/travis/gitterapp/githubts)](https://travis-ci.org/gitterapp/githubts)
 [![Codecov](https://img.shields.io/codecov/c/github/gitterapp/githubts)](https://codecov.io/gh/gitterapp/githubts)
+[![Coveralls github](https://img.shields.io/coveralls/github/gitterapp/githubts)](https://coveralls.io/github/gitterapp/githubts)
 
 Check the `packages` directory for all plugins.
 

@@ -1,7 +1,6 @@
 # Github for TypeScript
 
 ![Travis (.org)](https://img.shields.io/travis/gitterapp/githubts)
-
 [![codecov](https://codecov.io/gh/gitterapp/githubts/branch/master/graph/badge.svg)](https://codecov.io/gh/gitterapp/githubts)
 
 Check the `packages` directory for all plugins.

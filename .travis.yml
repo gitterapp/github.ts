@@ -13,4 +13,8 @@ install:
   - yarn install
 
 script:
-  - npm run test && npm run codecov && npm run coveralls
+  - npm run test
+
+after_script:
+  - npm run codecov
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js -repotoken $COVERALLS_TOKEN

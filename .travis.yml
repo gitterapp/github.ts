@@ -16,5 +16,5 @@ script:
   - npm run test
 
 after_script:
-  - npm run codecov
-  - cat ./coverage/lcov.info | coveralls -repotoken $COVERALLS_TOKEN
+  - npm run codecov && npm run coveralls
+#  - cat ./coverage/lcov.info | coveralls -repotoken $COVERALLS_TOKEN

@@ -17,4 +17,4 @@ script:
 
 after_script:
   - npm run codecov
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js -repotoken $COVERALLS_TOKEN
+  - cat ./coverage/lcov.info | coveralls -repotoken $COVERALLS_TOKEN

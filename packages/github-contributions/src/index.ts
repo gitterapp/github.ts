@@ -69,7 +69,4 @@ const getContributionsSvg = (
       })
   })
 
-export default {
-  getContributions,
-  getContributionsSvg,
-}
+export { getContributions, getContributionsSvg }

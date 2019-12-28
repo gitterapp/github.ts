@@ -9,7 +9,8 @@
     "lint": "eslint --ext .js packages",
     "precommit": "lint-staged",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
-    "test": "jest"
+    "test": "jest --testPathPattern",
+    "codecov": "codecov"
   },
   "lint-staged": {
     "**/!(dist)/**/*.{js,jsx,tsx,ts,less,json}": [
@@ -27,6 +28,7 @@
     "@typescript-eslint/eslint-plugin": "^2.11.0",
     "@typescript-eslint/parser": "^2.11.0",
     "babel-eslint": "^10.0.1",
+    "codecov": "^3.6.1",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",

@@ -1,12 +1,8 @@
 const { getContributions } = require('../src')
 
 describe('get contributions', () => {
-  let contributions
-  beforeAll(async () => {
-    contributions = await getContributions('upcwangying')
-  })
-
-  test('has data', () => {
+  test('has data', async () => {
+    const contributions = await getContributions('upcwangying')
     expect(contributions).not.toBeUndefined()
   })
 })

@@ -9,7 +9,7 @@
     "lint": "eslint --ext .js packages",
     "precommit": "lint-staged",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
-    "test": "jest --testPathPattern",
+    "test": "jest --passWithNoTests",
     "codecov": "codecov"
   },
   "lint-staged": {

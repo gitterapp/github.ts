@@ -2,11 +2,15 @@
   "name": "@githubts/github-languages",
   "version": "0.1.1",
   "description": "A library to get `GitHub languages` for TypeScript developers.",
-  "main": "dist/index",
-  "types": "dist/index",
+  "main": "dist/lib/index.js",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
+  "directories": {
+    "lib": "dist",
+    "test": "__tests__"
+  },
   "scripts": {
     "build": "npm run compile",
     "clean": "rm -rf ./dist",

@@ -1,6 +1,6 @@
 {
   "name": "@githubts/github-languages",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A library to get `GitHub languages` for TypeScript developers.",
   "main": "dist/lib/index.js",
   "types": "dist/types/index.d.ts",

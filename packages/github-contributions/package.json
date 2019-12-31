@@ -1,6 +1,6 @@
 {
   "name": "@githubts/github-contributions",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A library to get `GitHub contributions` for TypeScript developers.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

@@ -2,8 +2,8 @@
   "extends": "../../tsconfig.build.json",
 
   "compilerOptions": {
-    "declarationDir": "./dist/types",
-    "outDir": "./dist/lib"
+    "outDir": "lib",
+    "rootDir": "src"
   },
 
   "include": ["src/**/*"]

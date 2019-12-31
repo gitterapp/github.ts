@@ -2,18 +2,17 @@
   "name": "@githubts/github-trending",
   "version": "0.1.2",
   "description": "A library to get `GitHub trending repositories` or `GitHub trending developers` for TypeScript developers.",
-  "main": "dist/lib/index.js",
-  "types": "dist/types/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
-    "dist"
+    "lib"
   ],
   "directories": {
-    "lib": "dist",
     "test": "__tests__"
   },
   "scripts": {
     "build": "npm run compile",
-    "clean": "rm -rf ./dist",
+    "clean": "rm -rf ./lib",
     "compile": "tsc -p tsconfig.build.json",
     "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"

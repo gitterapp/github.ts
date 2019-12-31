@@ -14,7 +14,7 @@
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "lint-staged": {
-    "**/!(dist)/**/*.{js,jsx,tsx,ts,less,json}": [
+    "**/!(lib)/**/*.{js,jsx,tsx,ts,less,json}": [
       "prettier --write",
       "git add"
     ]

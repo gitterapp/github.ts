@@ -29,6 +29,16 @@ These are the available plugins in this repository.
 | [@githubts/github-languages](./packages/github-languages) | [![Npm](https://img.shields.io/npm/v/@githubts/github-languages)](https://www.npmjs.com/package/@githubts/github-languages) |
 | [@githubts/github-trending](./packages/github-trending) | [![Npm](https://img.shields.io/npm/v/@githubts/github-trending)](https://www.npmjs.com/package/@githubts/github-trending) |
 
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 ## License
 
 MIT
